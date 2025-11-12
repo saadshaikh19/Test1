@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+    char choice;
+
+    printf("Enter 2 numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    printf("\nEnter operator (+, -, *, /): ");
+    scanf(" %c", &choice);   // note the space before %c
+
+    switch (choice) {
+        case '+':
+            printf("Addition = %d\n", num1 + num2);
+            break;
+        case '-':
+            printf("Subtraction = %d\n", num1 - num2);
+            break;
+        case '*':
+            printf("Multiplication = %d\n", num1 * num2);
+            break;
+        case '/':
+            if (num2 == 0)
+                printf("Error! Division by zero.\n");
+            else
+                printf("Division = %d\n", num1 / num2);
+            break;
+        default:
+            printf("Invalid operator!\n");
+    }
+
+        return 0;}
